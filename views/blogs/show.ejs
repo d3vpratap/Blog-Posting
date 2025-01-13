@@ -1,0 +1,63 @@
+<% layout('layout/layout') -%>
+<section>
+    <!-- Blog Post Header -->
+    <section class="bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4"><%= blog.title %></h1>
+            <p class="lead">By <strong><%= blog.author %></strong> | <%= new Date(blog.createdAt).toLocaleDateString() %></p>
+        </div>
+    </section>
+
+    <!-- Blog Post Content -->
+    <section class="container my-5">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="card shadow-sm mb-4">
+                    <!-- Image -->
+                    <img src="<%= blog.img %>" class="card-img-top" alt="<%= blog.title %>">
+
+                    <div class="card-body">
+                        <h5 class="card-title">Blog Content</h5>
+                        <p class="card-text">
+                            <%= blog.blog %>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-lg-4">
+                <div class="sticky-top" style="top: 20px;">
+                    <div class="card mb-4">
+                        <div class="card-header bg-primary text-white">
+                            <h5>About the Author</h5>
+                        </div>
+                        <div class="card-body">
+                            <p><strong><%= blog.author %></strong> is passionate about writing, technology, and sharing knowledge with the world.</p>
+                        </div>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="card-header bg-primary text-white">
+                            <h5>Related Posts</h5>
+                        </div>
+                        <div class="card-body">
+                            <p>Check out other interesting blog posts related to this topic.</p>
+                            <ul class="list-unstyled">
+                                <li><a href="/blogs" class="text-decoration-none text-primary">Blog Post 1</a></li>
+                                <li><a href="/blogs" class="text-decoration-none text-primary">Blog Post 2</a></li>
+                                <li><a href="/blogs" class="text-decoration-none text-primary">Blog Post 3</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p>&copy; <%= new Date().getFullYear() %> My Blog. All rights reserved.</p>
+        </div>
+    </section>
+</section>

@@ -1,0 +1,59 @@
+<% layout('layout/layout')-%>
+<div class="container my-5">
+    <h1 class="text-center mb-4 display-5 fw-bold text-primary">Create a New Blog Post</h1>
+    <p class="text-center text-muted mb-5">Share your thoughts, stories, or experiences with the world!</p>
+
+    <form action="/blogs" method="post" class="shadow p-4 rounded bg-light">
+        <!-- Author -->
+        <div class="mb-4">
+            <label for="author" class="form-label fw-semibold">Author Name</label>
+            <input 
+                type="text" 
+                class="form-control form-control-lg border-primary" 
+                id="author" 
+                name="author" 
+                placeholder="Enter your name" 
+                required>
+        </div>
+        
+        <!-- Title -->
+        <div class="mb-4">
+            <label for="title" class="form-label fw-semibold">Title</label>
+            <input 
+                type="text" 
+                class="form-control form-control-lg border-primary" 
+                id="title" 
+                name="title" 
+                placeholder="Enter the blog title" 
+                required>
+        </div>
+
+        <!-- Image URL -->
+        <div class="mb-4">
+            <label for="img" class="form-label fw-semibold">Image URL</label>
+            <input 
+                type="url" 
+                class="form-control form-control-lg border-primary" 
+                id="img" 
+                name="img" 
+                placeholder="Enter an image URL (optional)">
+        </div>
+
+        <!-- Blog Content -->
+        <div class="mb-4">
+            <label for="blog" class="form-label fw-semibold">Blog Content</label>
+            <textarea 
+                class="form-control form-control-lg border-primary" 
+                id="blog" 
+                name="blog" 
+                rows="6" 
+                placeholder="Write your blog here..." 
+                required></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="d-grid">
+            <button type="submit" class="btn btn-lg btn-primary fw-bold">Publish Blog</button>
+        </div>
+    </form>
+</div>
