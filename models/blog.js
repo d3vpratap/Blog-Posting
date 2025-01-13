@@ -1,6 +1,5 @@
 const { Sequelize, DataTypes, UUIDV4 } = require('sequelize');
 const { sequelize }   = require('../db');
-const User = require('../../../../../GitHub/E-commerce/e-comereceWEB/v2/models/user');
 const Blog = sequelize.define('blogs',
     {
         id:{
